@@ -3,7 +3,7 @@
   package="com.celo.flutter_celo_composer"
 >
    <application
-    android:label="sophon"
+    android:label="Nexus"
     android:name="${applicationName}"
     android:icon="@mipmap/ic_launcher"
   >
