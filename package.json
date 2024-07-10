@@ -6,7 +6,6 @@
     "author": "Celo",
     "license": "MIT",
     "scripts": {
-        "hardhat:compile": "yarn workspace @customer_retention_web3/hardhat compile"
     },
     "repository": {
         "type": "git",
