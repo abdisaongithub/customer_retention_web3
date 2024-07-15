@@ -29,6 +29,7 @@ import CoinsCarousel from "./carousel";
 import CoinsCarouselItem from "./carousel_item";
 
 import BottomSheetComponent from "./bottom_sheet";
+import { Link } from "react-router-dom";
 
 const Landing = (props) => {
 
@@ -61,7 +62,7 @@ const Landing = (props) => {
               </div>
             </div>
 
-            <div className="">
+            <Link to={`/detail/1`} className="">
               <div className="mt-2 mx-2">
                 <Card className="w-full sm:w-26">
                   <CardHeader className={`p-2 m-0 `}>
@@ -133,10 +134,10 @@ const Landing = (props) => {
                   </CardFooter> */}
                 </Card>
                 
-                <BottomSheetComponent />
+                {/* <BottomSheetComponent /> */}
 
               </div>
-            </div>
+            </Link>
           </div>
         </div>
 
