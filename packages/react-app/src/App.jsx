@@ -13,10 +13,15 @@ import { celo, celoAlfajores } from "wagmi/chains";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Home from "./pages/home";
 
-import SignUp from "./pages/auth/signup";
+
 import Landing from "./pages/landing";
 import { Routes, Route } from "react-router-dom";
-import CampaignDetail from "./pages/campain_detail";
+
+import CampaignDetail from "./pages/campaign_detail";
+
+import SignIn from "./pages/auth/signin";
+import SignUp from "./pages/auth/signup";
+import Profile from "./pages/profile";
 
 const connectors = connectorsForWallets(
   [
@@ -51,7 +56,13 @@ function App() {
             <Routes>
               <Route path="/" element={<Layout />}>
                 <Route path="/" exact  element={<Landing />} />
+                <Route path="/profile" exact  element={<Profile />} />
                 <Route path="/detail/1" exact  element={<CampaignDetail />} />
+              </Route>
+
+              <Route path="/auth" element={<Layout />}>
+                <Route path="/auth/signin" exact  element={<SignIn />} />
+                <Route path="/auth/signup" exact  element={<SignUp />} />
               </Route>
 
               {/* <Route path="/" element={<MainDashboard />}>

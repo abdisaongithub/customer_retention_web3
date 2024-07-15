@@ -1,6 +1,15 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 import CardanoLogo from "../assets/cardano-ada-logo.svg";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+import NexusLogo from "../assets/nexus_logo.png";
+import { Button } from "@/components/ui/button";
 
 const CampaignDetail = (props) => {
   return (
@@ -147,6 +156,51 @@ const CampaignDetail = (props) => {
             <p className="text-sm">Seconds</p>
           </div>
         </div>
+      </div>
+
+      <div className="my-2">
+        <Accordion type="single" collapsible defaultValue={"item-1"}>
+          <AccordionItem value="item-1">
+            <AccordionTrigger className={``}>Description</AccordionTrigger>
+            <AccordionContent>
+              <p>The L1 Powering Apps Through DePin </p>
+              <p className="underline">$KAI and you</p>
+
+              <p>Let's make supercomputing accessible and affordable </p>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </div>
+
+      <div className="my-2">
+        <Accordion type="single" collapsible defaultValue={"item-1"}>
+          <AccordionItem value="item-1">
+            <AccordionTrigger className={``}>Questers</AccordionTrigger>
+            <AccordionContent>
+              <p>The L1 Powering Apps Through DePin </p>
+              <p className="underline">$KAI and you</p>
+
+              <p>Let's make supercomputing accessible and affordable </p>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </div>
+
+      <div className="rounded rounded-t-full">
+        <div className="flex">
+          <p className="font-bold">Reward </p>
+          <div className="rounded-full flex px-2 py-1">
+            <img src={NexusLogo} className="h-8" />
+            <p>Lucky Draw</p>
+          </div>
+          <div className="rounded-full flex px-2 py-1 ml-auto">
+            <img src={NexusLogo} className="h-8" />
+            <p>Polygon</p>
+          </div>
+        </div>
+        <Button variant="outline" className={`mx-auto w-full`}>
+          Claim Reward
+        </Button>
       </div>
     </div>
   );
