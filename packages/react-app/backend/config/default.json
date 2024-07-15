@@ -1,0 +1,5 @@
+{
+    "paginationLimit": 10,
+    "requestTimeout": 15,
+    "postTimeout": 15
+}
