@@ -13,6 +13,8 @@ import { celo, celoAlfajores } from "wagmi/chains";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Home from "./pages/home";
 
+import SignUp from "./pages/auth/signup";
+import Landing from "./pages/landing";
 
 const connectors = connectorsForWallets(
   [
@@ -39,7 +41,6 @@ const config = createConfig({
 const queryClient = new QueryClient();
 
 function App() {
-
   return (
     <>
       <WagmiProvider config={config}>
@@ -47,7 +48,15 @@ function App() {
           <RainbowKitProvider>
             <Layout>
 
-              <Home />
+              
+
+              {/* <SignUp /> */}
+
+              <Landing />
+
+              {/* <Home /> */}
+
+              
 
             </Layout>
           </RainbowKitProvider>
